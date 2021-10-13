@@ -7,7 +7,7 @@ router
   .route("/:corsId")
   .get(controller.read)
   .put(controller.update)
-  .delete(controller.delete)
+  .delete(cors(), controller.delete)
   .all(methodNotAllowed);
 
 router
